@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class guia4ej2nombreedad {
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+        boolean opcion=true;
+    while (opcion){
+        System.out.println("ingrese un nombre");
+        System.out.println("ingrese edad");
+       String nombre =leer.nextLine();
+        int edad = leer.nextInt();
+        mayor(nombre,edad);
+        System.out.println("desea continuar ? si/no ");
+        String seguir = leer.nextLine();
+        opcion=seguir.equalsIgnoreCase("si");
+    }    
+    }
+    public static void mayor(String nombre,int edad){
+        if (edad<18){
+            System.out.println("la persona es menor de edad");
+        }else{
+            System.out.println("la persona es mayor de edad");
+        } 
+    }
+}
